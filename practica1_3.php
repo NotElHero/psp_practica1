@@ -25,6 +25,9 @@
                 echo "<img src='baraja/Oros/" +'$rand'+".jpg'>";
                 break;
         }
+
+        //No esta acabado ni de lejos, pero no tengo mucho tiempo libre para mirarlo
+        //Cuando no tenga trabajo, le doy una vuelta y lo acabo definitivamente
     }
 
     
