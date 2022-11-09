@@ -1,76 +1,42 @@
 <?php
-    $carta1 = rand(1, 4);
-    $carta2 = rand(1, 4);
-    $carta3 = rand(1, 4);
-    $carta4 = rand(1, 4);
+$nCartas = 5;
 
-    $rand1 = rand(1, 12);
-    $rand2 = rand(1, 12);
-    $rand3 = rand(1, 12);
-    $rand4 = rand(1, 12);
-
-    for ($i=1; $i < 5; $i++) { 
-        $rand = rand(1, 12);
-        switch ($carta1) {
+echo '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Villacorta">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    ';
+    for ($i=0; $i < $nCartas; $i++) { 
+        switch (rand(1, 4)) {
             case 1:
-                echo "<img src='baraja/Bastos/" +'$rand'+".jpg'>";
+                $baraja = 'Bastos';
                 break;
             case 2:
-                echo "<img src='baraja/Copas/" +'$rand'+".jpg'>";
+                $baraja = 'Copas';
                 break;
             case 3:
-                echo "<img src='babraja/Espadas/" +'$rand'+".jpg'>";
+                $baraja = 'Oros';
                 break;
             case 4:
-                echo "<img src='baraja/Oros/" +'$rand'+".jpg'>";
+                $baraja = 'Espadas';
                 break;
         }
+        $cartaRand = rand(1, 12);
 
-        //No esta acabado ni de lejos, pero no tengo mucho tiempo libre para mirarlo
-        //Cuando no tenga trabajo, le doy una vuelta y lo acabo definitivamente
+        echo '<br>';
+        echo "<img src='baraja/", strval($baraja), "/", $cartaRand, ".jpg'>";      
     }
-
     
-    // switch ($carta2) {
-    //     case 1:
-    //         echo "<img src='baraja/Bastos/" +"$rand1"+".jpg'>";
-    //         break;
-    //     case 2:
-    //         echo "<img src='baraja/Copas/" +"$rand2"+".jpg'>";
-    //         break;
-    //     case 3:
-    //         echo "<img src='babraja/Espadas/" +"$rand3"+".jpg'>";
-    //         break;
-    //     case 4:
-    //         echo "<img src='baraja/Oros/" +"$rand4"+".jpg'>";
-    //         break;
-    // }
-    // switch ($carta3) {
-    //     case 1:
-    //         echo "<img src='baraja/Bastos/" +"$rand1"+".jpg'>";
-    //         break;
-    //     case 2:
-    //         echo "<img src='baraja/Copas/" +"$rand2"+".jpg'>";
-    //         break;
-    //     case 3:
-    //         echo "<img src='babraja/Espadas/" +"$rand3"+".jpg'>";
-    //         break;
-    //     case 4:
-    //         echo "<img src='baraja/Oros/" +"$rand4"+".jpg'>";
-    //         break;
-    // }
-    // switch ($carta4) {
-    //     case 1:
-    //         echo "<img src='baraja/Bastos/" +"$rand1"+".jpg'>";
-    //         break;
-    //     case 2:
-    //         echo "<img src='baraja/Copas/" +"$rand2"+".jpg'>";
-    //         break;
-    //     case 3:
-    //         echo "<img src='babraja/Espadas/" +"$rand3"+".jpg'>";
-    //         break;
-    //     case 4:
-    //         echo "<img src='baraja/Oros/" +"$rand4"+".jpg'>";
-    //         break;
-    // }
+    echo '
+</body>
+</html>
+';
+
 ?>
