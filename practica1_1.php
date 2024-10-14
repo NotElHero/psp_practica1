@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Javier Villacorta">
-    <title>Practica1</title>
+    <title>Practica1_1</title>
 </head>
 <body>
     <?php
+    //La funcion rand() genera un numero aleatorio que se comprende entre x (siendo el numero menor), e y (siendo el mayor)
     $var = rand(1, 6);
 
     switch ($var) {
@@ -31,6 +32,9 @@
             echo "<img src='dados/dado6.png'>";
             break;                
     }
+    /*echo se puede usar para sacar codigo html, el navegador lo interpretara como tal. En este caso estamos tirando dados aleatorios
+    y mostrando los resultados mediante imagenes. Para sacar una imagen simplemente tenemos que poner la ruta dentro de la etiqueta
+    <img>*/
     ?>
 </body>
 </html>
